@@ -1,0 +1,8 @@
+1. FedAvg : 3 clients × 5 rounds × 5 epochs
+3 clients = 3 compagnies aériennes, chacune garde ses données. À chaque round, elles entraînent localement pendant 5 epochs (= 5 lectures complètes de leurs données), puis envoient uniquement leurs poids au serveur — jamais les données brutes. Le serveur fait la moyenne et redistribue un modèle global amélioré. 5 rounds plus tard, le cerveau collectif surpasse chaque modèle individuel.
+
+2. Pourquoi cycle_moteur domine dans SHAP ?
+C'est la variable de temps : plus le cycle est élevé, plus le moteur est usé, moins il reste de vie. La relation est quasi-directe, le modèle la capte immédiatement. Mais les autres capteurs — température, vibration, pression — apportent la vraie valeur ajoutée : deux moteurs au même cycle peuvent avoir des RUL très différents si l'un montre des signes de dégradation accélérée. C'est là que l'IA dépasse le simple comptage.
+
+3. Pourquoi le modèle silo prédit un RUL croissant sur un moteur en fin de vie ?
+Le modèle local n'a été entraîné que sur un seul profil de moteur. Face à un profil différent avec des températures et vibrations qu'il n'a jamais vues, il extrapole de façon arbitraire — et prédit un RUL qui monte alors que le moteur est déjà à zéro cycle restant. En aviation, ce serait catastrophique : le système dirait "pas besoin de révision" sur un moteur en défaillance. Le modèle fédéré élimine ce risque car chaque client a, indirectement, appris de tous les profils
