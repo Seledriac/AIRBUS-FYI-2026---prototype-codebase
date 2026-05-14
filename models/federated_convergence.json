@@ -1,0 +1,1 @@
+{"round_metrics": [{"round": 1, "mae_train": 34.38, "mae_test": 35.06, "r2_test": 0.7429}, {"round": 2, "mae_train": 22.06, "mae_test": 23.27, "r2_test": 0.8524}, {"round": 3, "mae_train": 20.51, "mae_test": 21.73, "r2_test": 0.8631}, {"round": 4, "mae_train": 19.7, "mae_test": 20.9, "r2_test": 0.8711}, {"round": 5, "mae_train": 18.89, "mae_test": 19.95, "r2_test": 0.8777}]}
